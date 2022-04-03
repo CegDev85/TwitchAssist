@@ -50,10 +50,10 @@ const TextUploadHolder = ({badWords}) => {
   return (
     <div className='text-box'>
         <h2>TextUploadHolder</h2>
-        <p>{text}</p>
+        {/* <p>{text}</p> */}
         <p>{foundWords}</p>
 
-        < Text setText={setText}/>
+        < Text text={text} setText={setText}/>
         <button type='button' onClick={handleClick} >CHECK FOR SWEARS!</button>
 
         <button type='button' onClick={() => setButtonPop(true)} >Popout</button>

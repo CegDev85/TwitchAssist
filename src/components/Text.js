@@ -1,6 +1,7 @@
 import { clear } from '@testing-library/user-event/dist/clear'
 import React from 'react'
 import { useEffect,useState } from 'react'
+import TextBox from './TextBox'
 
 
 
@@ -12,10 +13,10 @@ import { useEffect,useState } from 'react'
 
 
 
-const Text = ({setText}) => {
+const Text = ({setText, text}) => {
 
  
-    const [input, setInput] = useState('li')
+    const [input, setInput] = useState('')
 
     // useEffect(() => {
     //     setInput(input)
@@ -49,12 +50,14 @@ const Text = ({setText}) => {
 
   return (
     <div className='text'>
+        {/* <p>{input}</p> */}
+        < TextBox text={text} />
         <form >
             <label for='textinput'>Text Input</label>
             <input type='text' name='textinput' placeholder='paste text here' onChange={handleChange}  />
         </form>
         <button type='button' onClick={handleClick} >Load your text file</button>
-
+        
 
         {/* <form >
             <h3>lsl</h3>
